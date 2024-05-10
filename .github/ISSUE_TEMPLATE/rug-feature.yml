@@ -1,6 +1,6 @@
-name: Rug Report
-description: File a bug report
-title: "[RUG] "
+name: Test Form
+description: Something Something
+title: "[Test Feature] "
 body:
   - type: markdown
     attributes:
@@ -9,17 +9,28 @@ body:
     id: title
     attributes:
       label: Title
-      description: "Enter a brief title for the bug. Maximum 80 characters."
-      placeholder: "A short title"
+      description: "Summary of the request. Maximum 80 characters."
+      placeholder: "something something, jfdi"
     validations:
       required: true
       max_length: 80
   - type: textarea
-    id: description
+    id: business-justification
     attributes:
-      label: Description
-      description: "Detailed description of the issue. Maximum 500 characters."
-      placeholder: "Provide a detailed description"
+      label: Business Justification
+      description: "Provide a detailed description of the business justification for this feature. Maximum 200 characters."
+      placeholder: "something something, money, risk, etc."
     validations:
       required: true
-      max_length: 500
+      max_length: 200
+  - type: input
+    id: account-name
+    attributes:
+      label: Account Name
+      description: "Enter the account name. Must be in the format of `xxxxx-xxxxx-<env>`."
+      placeholder: "skycloud-gtest-dev"
+    validations:
+      required: true
+      pattern: "^[A-Za-z]{5}-.{5}-(dev|stage|prod)$"
+      max_length: 30
+
