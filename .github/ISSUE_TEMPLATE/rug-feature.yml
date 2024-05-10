@@ -1,0 +1,25 @@
+name: Rug Report
+description: File a bug report
+title: "[RUG] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please fill out the form below."
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: "Enter a brief title for the bug. Maximum 80 characters."
+      placeholder: "A short title"
+    validations:
+      required: true
+      max_length: 80
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Detailed description of the issue. Maximum 500 characters."
+      placeholder: "Provide a detailed description"
+    validations:
+      required: true
+      max_length: 500
