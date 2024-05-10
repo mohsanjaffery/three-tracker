@@ -33,4 +33,12 @@ body:
       required: true
       pattern: "^[A-Za-z]{5}-.{5}-(dev|stage|prod)$"
       max_length: 30
-
+  - type: input
+    id: environment_tag
+    attributes:
+      label: Environment Tag
+      description: "Enter the tag in the format Aaaaa-bbbbb-ccccc. Example: Xyz12-abcde-dev"
+      placeholder: "e.g., Xyz12-abcde-dev"
+    validations:
+      required: true
+      pattern: "^[A-Za-z]{5}-.{5}-(dev|stage|prod)$"
