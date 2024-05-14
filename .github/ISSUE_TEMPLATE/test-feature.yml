@@ -6,9 +6,9 @@ body:
     attributes:
       value: "Please fill out the form below."
   - type: input
-    id: title
+    id: description
     attributes:
-      label: Title
+      label: Description
       description: "Summary of the request. Maximum 80 characters."
       placeholder: "something something, jfdi"
     validations:
