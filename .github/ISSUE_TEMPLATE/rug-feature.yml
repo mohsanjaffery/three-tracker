@@ -28,7 +28,7 @@ body:
     attributes:
       label: Account Name
       description: "Enter the account name. Must be in the format of `xxxxx-xxxxx-<env>`."
-      placeholder: "skycloud-gtest-dev"
+      placeholder: "somecloud-xtest-dev"
     validations:
       required: true
       pattern: "^[A-Za-z]{5}-.{5}-(dev|stage|prod)$"
