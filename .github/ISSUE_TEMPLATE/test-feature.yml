@@ -13,7 +13,6 @@ body:
       placeholder: "something something, jfdi"
     validations:
       required: true
-      max_length: 80
   - type: textarea
     id: business-justification
     attributes:
@@ -21,8 +20,7 @@ body:
       description: "Provide a detailed description of the business justification for this feature. Maximum 200 characters."
       placeholder: "something something, money, risk, etc."
     validations:
-      required: true
-      max_length: 200
+      required: false
   - type: input
     id: account-name
     attributes:
@@ -31,8 +29,7 @@ body:
       placeholder: "somecloud-xtest-dev"
     validations:
       required: true
-      pattern: "^[A-Za-z]{5}-.{5}-(dev|stage|prod)$"
-      max_length: 5
+
   - type: checkboxes
     id: required-access
     attributes:
@@ -41,4 +38,4 @@ body:
       options:
         - label: Public Bucket Access
         - label: IGW
-        - label: Host based access - All
+        - label: HBA - All
