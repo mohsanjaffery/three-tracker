@@ -29,15 +29,6 @@ body:
       placeholder: "somecloud-xtest-dev"
     validations:
       required: true
-  - type: checkboxes
-    id: required-access
-    attributes:
-      label: Required Access
-      description: Select the access options below
-      options:
-        - label: Public Bucket Access
-        - label: IGW
-        - label: HBA - All
   - type: dropdown
     id: account-type
     attributes:
@@ -48,7 +39,16 @@ body:
         - Shared Infrastructure
       default: 0
     validations:
-      required: true
+      required: true      
+  - type: checkboxes
+    id: required-access
+    attributes:
+      label: Required Access
+      description: Select the access options below
+      options:
+        - label: Public Bucket Access
+        - label: IGW
+        - label: HBA - All
   - type: textarea
     id: manifest
     attributes:
