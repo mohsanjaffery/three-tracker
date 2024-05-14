@@ -33,3 +33,12 @@ body:
       required: true
       pattern: "^[A-Za-z]{5}-.{5}-(dev|stage|prod)$"
       max_length: 5
+  - type: checkboxes
+    id: required-access
+    attributes:
+      label: Required Access
+      description: Select the access options below
+      options:
+        - label: Public Bucket Access
+        - label: IGW
+        - label: Host based access - All
