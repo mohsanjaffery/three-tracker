@@ -29,7 +29,6 @@ body:
       placeholder: "somecloud-xtest-dev"
     validations:
       required: true
-
   - type: checkboxes
     id: required-access
     attributes:
@@ -39,3 +38,20 @@ body:
         - label: Public Bucket Access
         - label: IGW
         - label: HBA - All
+  - type: dropdown
+    id: account-type
+    attributes:
+      label: Account Type
+      description: What type of account do you want
+      options:
+        - Application Hosting
+        - Shared Infrastructure
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: manifest
+    attributes:
+      label: Manifest template (json)
+      description: Drop your json template manifest here
+      render: json      
